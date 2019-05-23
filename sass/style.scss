@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #222f3e;
+    text-align: center;
+    color: #ecf0f1;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+input,
+button {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+button {
+    width: 160px;
+
+    .fas {
+        margin-right: 4px;
+    }
+
+    .pending {
+        display: none;
+    }
+
+    &.pending {
+        background-color: lightblue;
+
+        .pending {
+            display: inline;
+        }
+
+        .default {
+            display: none;
+        }
+    }
+}
+
+.results-wrapper {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.country {
+    margin: 0 0 40px 0;
+    display: flex;
+    border-bottom: 1px solid grey;
+    padding-bottom: 40px;
+
+    .flag {
+        margin-right: 15px;
+        height: 40px;
+        width: 80px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .name {
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-row {
+        text-align: left;
+        display: flex;
+        line-height: 20px;
+
+        .data-name {
+            min-width: 100px;
+            color: lightcoral;
+        }
+    }
+}

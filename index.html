@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Countries</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Search a country!</h1>
+            <div class="input-wrapper">
+                <input id="input" type="text">
+                <button id="search">
+                    <span class="icon-container pending">
+                        <i class="fas fa-redo fa-spin"></i>
+                    </span>
+                    <span class="default">Search!</span>
+                </button>
+            </div>
+
+            <div class="results-wrapper"></div>
+        </div>
+
+        <script id="country-template" type="x-tmpl-mustache">
+            <div class="country">
+                <div class="flag">
+                    <img src={{flag}}>
+                </div>
+                <div class="data">
+                    <div class="name">{{name}}</div>
+                    <div class="data-row">
+                        <div class="data-name">Capital</div>
+                        <div class="data-value">{{capital}}</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-name">Language</div>
+                        <div class="data-value">{{language}}</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-name">Currency</div>
+                        <div class="data-value">{{currency}}</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
